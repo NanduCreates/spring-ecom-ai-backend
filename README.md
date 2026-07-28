@@ -58,7 +58,7 @@ Product information is persisted through the **Spring Boot backend and PostgreSQ
 
 <!-- Replace add-product.png with your actual screenshot filename -->
 
-![Add Product](screenshots/add-product.png)
+![Add Product](projects/add-product.png)
 
 ---
 
