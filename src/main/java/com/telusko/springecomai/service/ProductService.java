@@ -1,5 +1,4 @@
 package com.telusko.springecomai.service;
-
 import com.telusko.springecomai.model.Product;
 import com.telusko.springecomai.repo.ProductRepo;
 import org.springframework.ai.chat.client.ChatClient;
@@ -17,7 +16,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
-import java.nio.file.Files;
+
 import java.util.*;
 
 @Service
@@ -148,11 +147,9 @@ public class ProductService {
     public List<Product> semanticSearchProducts(String userQuery) {
         try {
             // Load prompt template from classpath resource
-            String promptTemplate = Files.readString(
-                    resourceLoader.getResource("classpath:prompts/product-search-prompt.st")
-                            .getFile()
-                            .toPath()
-            );
+            String promptTemplate = resourceLoader
+                    .getResource("classpath:prompts/product-search-prompt.st")
+                    .getContentAsString(java.nio.charset.StandardCharsets.UTF_8);
 
             // Fetch related context from vector store using semantic similarity
             String context = fetchSemanticContext(userQuery);

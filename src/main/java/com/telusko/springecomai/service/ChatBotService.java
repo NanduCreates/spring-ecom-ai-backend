@@ -30,11 +30,9 @@ public class ChatBotService {
     public String getBotResponse(String userQuery) {
         try {
             // Load prompt template from classpath resource
-            String promptTemplate = Files.readString(
-                    resourceLoader.getResource("classpath:prompts/chatbot-rag-prompt.st")
-                            .getFile()
-                            .toPath()
-            );
+            String promptTemplate = resourceLoader
+                    .getResource("classpath:prompts/chatbot-rag-prompt.st")
+                    .getContentAsString(java.nio.charset.StandardCharsets.UTF_8);
 
             // Fetch similar content from the vector store using semantic search
             String context = fetchSemanticContext(userQuery);
