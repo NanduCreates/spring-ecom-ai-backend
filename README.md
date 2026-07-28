@@ -46,7 +46,7 @@ Browse available products through a simple and clean e-commerce interface.
 
 <!-- Replace home.png with your actual screenshot filename -->
 
-![Home Page](screenshots/home.png)
+![Home Page](Projects/Screenshot 2026-07-28 114654.png)
 
 ---
 
