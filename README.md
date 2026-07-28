@@ -250,20 +250,6 @@ src/
     └── resources/
         └── application.properties
 
-screenshots/
-├── home.png
-├── add-product.png
-├── ask-ai.png
-├── semantic-search.png
-├── chatbot.png
-└── orders.png
-
-pom.xml
-README.md
-```
-
----
-
 # ⚙️ Getting Started
 
 ## 1. Clone the Repository
