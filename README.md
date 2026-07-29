@@ -11,21 +11,6 @@ An AI-powered eCommerce platform built with **Spring Boot**, **React**, and **Op
 
 ---
 
-# 🚀 Features
-
-### 🛍️ E-Commerce
-
-- User Registration & Login
-- JWT Authentication
-- Role-Based Authorization (Admin/User)
-- Product Catalog
-- Category Filtering
-- Shopping Cart
-- Order Management
-- Admin Dashboard
-- Product Image Upload
-- Responsive UI
-
 ### 🤖 AI Features
 
 - AI Shopping Assistant
@@ -65,7 +50,7 @@ An AI-powered eCommerce platform built with **Spring Boot**, **React**, and **Op
 
 ## 🤖 AI Shopping Assistant
 
-![AI Assistant](Projects/ask-ai.png)
+![AI Assistant](Projects/ask-ai.png) ![Product Added](Projects/add-products.png)
 
 ---
 
