@@ -46,6 +46,8 @@ An AI-powered eCommerce platform built with **Spring Boot**, **React**, and **Op
 
 ![Semantic Search](Projects/semantic-search.png)
 
+This feature leverages **Spring AI** and **OpenAI Embeddings** to enable intelligent product discovery. Instead of relying on traditional keyword matching, user queries are transformed into vector embeddings and compared against stored product embeddings to retrieve the most semantically relevant products. This allows users to search using conversational phrases like *"wireless headphones for gaming"* or *"comfortable shoes for running"* and receive accurate, context-aware recommendations.
+
 ---
 
 ## 🤖 AI Shopping Assistant
