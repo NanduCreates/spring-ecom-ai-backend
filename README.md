@@ -32,7 +32,7 @@ An AI-powered eCommerce platform built with **Spring Boot**, **React**, and **Op
 
 ## ➕ Add Product
 
-![Add Product](Projects/add-product.png)
+![Add Product](Projects/add-product.png)![Product Added](Projects/add-products.png)
 
 ---
 
@@ -50,7 +50,7 @@ An AI-powered eCommerce platform built with **Spring Boot**, **React**, and **Op
 
 ## 🤖 AI Shopping Assistant
 
-![AI Assistant](Projects/ask-ai.png) ![Product Added](Projects/add-products.png)
+![AI Assistant](Projects/ask-ai.png)
 
 ---
 
