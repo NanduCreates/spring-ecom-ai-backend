@@ -1,375 +1,286 @@
-<div align="center">
+# 🛒 Ecom AI Web
 
-# 🛍️ AI-Powered E-Commerce Platform
+An AI-powered eCommerce platform built with **Spring Boot**, **React**, and **OpenAI** that provides intelligent product discovery using **semantic search**, AI shopping assistance, and a complete online shopping experience.
 
-### Intelligent Product Discovery with Spring AI & Semantic Search
-
-A modern e-commerce application that combines traditional product management with **Generative AI, Vector Embeddings, Semantic Search, and an AI-powered product chatbot**.
-
-<br>
-
-![Java](https://img.shields.io/badge/Java-17+-orange?style=for-the-badge\&logo=openjdk)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen?style=for-the-badge\&logo=springboot)
-![Spring AI](https://img.shields.io/badge/Spring%20AI-GenAI-green?style=for-the-badge\&logo=spring)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Vector%20Search-blue?style=for-the-badge\&logo=postgresql)
-
-</div>
+![Java](https://img.shields.io/badge/Java-21-orange)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-green)
+![React](https://img.shields.io/badge/React-19-blue)
+![MySQL](https://img.shields.io/badge/MySQL-Database-blue)
+![OpenAI](https://img.shields.io/badge/OpenAI-AI-black)
+![Docker](https://img.shields.io/badge/Docker-Ready-blue)
 
 ---
 
-## 🚀 About The Project
+# 🚀 Features
 
-This project is an **AI-powered e-commerce application** built using **Java, Spring Boot, Spring AI, and PostgreSQL**.
+### 🛍️ E-Commerce
 
-Along with standard product and order functionality, the application introduces intelligent product discovery through **semantic search and conversational AI**.
+- User Registration & Login
+- JWT Authentication
+- Role-Based Authorization (Admin/User)
+- Product Catalog
+- Category Filtering
+- Shopping Cart
+- Order Management
+- Admin Dashboard
+- Product Image Upload
+- Responsive UI
 
-Instead of relying only on exact keyword searches, users can describe what they are looking for in natural language and receive relevant product results.
+### 🤖 AI Features
 
-### ✨ Highlights
-
-* 🛍️ Product browsing
-* ➕ Product management
-* 📦 Order management
-* 🤖 AI-powered product assistance
-* 💬 Conversational product chatbot
-* 🔍 Semantic product search
-* 🧠 Vector embeddings
-* ⚡ Similarity-based product retrieval
+- AI Shopping Assistant
+- Semantic Product Search
+- Vector Embeddings
+- Context-Aware Recommendations
+- Natural Language Product Discovery
+- Intelligent Product Suggestions
 
 ---
 
-# 📸 Application Preview
+# 🖼️ Screenshots
 
 ## 🏠 Home Page
 
-Browse available products through a simple and clean e-commerce interface.
-
-<!-- Replace home.png with your actual screenshot filename -->
-
-![Home Page](projects/home.png)
+![Home](Projects/home.png)
 
 ---
 
 ## ➕ Add Product
 
-Add products to the application with details such as product name, description, price, and other relevant information.
-
-Product information is persisted through the **Spring Boot backend and PostgreSQL database**.
-
-<!-- Replace add-product.png with your actual screenshot filename -->
-
-![Add Product](projects/add-product.png)
+![Add Product](Projects/add-product.png)
 
 ---
 
-# 🤖 Ask AI
+## 📦 Orders
 
-The **Ask AI** feature integrates Generative AI into the e-commerce experience.
-
-Users can ask natural-language questions about products and receive intelligent responses instead of manually searching through product information.
-
-### 💬 Example
-
-> **User:** Suggest something useful for listening to music.
-
-> **AI:** Based on the available products, wireless headphones would be a suitable option.
-
-<!-- Replace ask-ai.png with your actual screenshot filename -->
-
-![Ask AI](screenshots/ask-ai.png)
+![Orders](Projects/orders.png)
 
 ---
 
-# 🔍 Semantic Product Search
+## 🔍 Semantic Search
 
-One of the key features of this application is **Semantic Search**.
-
-Traditional search relies primarily on exact keyword matching. Semantic search instead attempts to understand the **meaning and intent** behind the user's query.
-
-### 💡 Example
-
-Suppose the store contains:
-
-> 🎧 **Wireless Headphones**
-
-The user doesn't necessarily need to search for:
-
-> `headphones`
-
-They could search:
-
-> `Something I can use to listen to music while travelling`
-
-The system converts the query into a **vector embedding** and performs similarity search against product embeddings to retrieve semantically relevant products.
-
-<!-- Replace semantic-search.png with your actual screenshot filename -->
-
-![Semantic Search](screenshots/semantic-search.png)
+![Semantic Search](Projects/semantic-search.png)
 
 ---
 
-## 🧠 How Semantic Search Works
+## 🤖 AI Shopping Assistant
 
-```text
-User enters a natural-language query
-                 │
-                 ▼
-        Generate Query Embedding
-                 │
-                 ▼
-          Vector Representation
-                 │
-                 ▼
-      Compare with Product Vectors
-                 │
-                 ▼
-       Vector Similarity Search
-                 │
-                 ▼
-      Most Relevant Products
-```
-
-This enables product discovery based on **meaning rather than only exact words**.
-
----
-
-# 💬 AI Product Chatbot
-
-The application also includes an **AI-powered product chatbot**.
-
-Users can interact with the chatbot conversationally to learn more about products available in the store.
-
-### Example Questions
-
-> 💬 "What products do you have?"
-
-> 💬 "Tell me about the headphones."
-
-> 💬 "Do you have something useful for entertainment?"
-
-> 💬 "Which product would be suitable for listening to music?"
-
-The chatbot provides contextual responses based on product information.
-
-<!-- Replace chatbot.png with your actual screenshot filename -->
-
-![AI Product Chatbot](screenshots/chatbot.png)
-
----
-
-# 📦 Orders
-
-The application includes an Orders section for viewing and managing product orders.
-
-<!-- Replace orders.png with your actual screenshot filename -->
-
-![Orders Page](screenshots/orders.png)
-
----
-
-# 🏗️ Application Architecture
-
-```text
-                         ┌─────────────────┐
-                         │      User       │
-                         └────────┬────────┘
-                                  │
-                                  ▼
-                         ┌─────────────────┐
-                         │  E-Commerce UI  │
-                         └────────┬────────┘
-                                  │
-                                  ▼
-                    ┌────────────────────────┐
-                    │      Spring Boot       │
-                    │        Backend         │
-                    └───────────┬────────────┘
-                                │
-             ┌──────────────────┼──────────────────┐
-             │                  │                  │
-             ▼                  ▼                  ▼
-      ┌─────────────┐    ┌─────────────┐    ┌─────────────┐
-      │ PostgreSQL  │    │  Spring AI  │    │ Embeddings  │
-      │  Database   │    │    / LLM    │    │   Model     │
-      └─────────────┘    └──────┬──────┘    └──────┬──────┘
-                                │                  │
-                                └────────┬─────────┘
-                                         ▼
-                                ┌─────────────────┐
-                                │ Vector Similarity│
-                                │      Search      │
-                                └─────────────────┘
-```
+![AI Assistant](Projects/ask-ai.png)
 
 ---
 
 # 🛠️ Tech Stack
 
-| Technology                  | Purpose                    |
-| --------------------------- | -------------------------- |
-| ☕ Java                      | Backend programming        |
-| 🍃 Spring Boot              | Backend framework          |
-| 🤖 Spring AI                | AI integration             |
-| 🗃️ Spring Data JPA         | Data access                |
-| 🔄 Hibernate                | ORM                        |
-| 🐘 PostgreSQL               | Database                   |
-| 🧠 Vector Embeddings        | Semantic representation    |
-| 🔍 Vector Similarity Search | Semantic product retrieval |
-| 🔗 REST APIs                | Application communication  |
-| 📦 Maven                    | Dependency management      |
-| 🧪 Postman                  | API testing                |
-| 🔧 Git & GitHub             | Version control            |
+## Backend
 
----
+- Java 21
+- Spring Boot
+- Spring MVC
+- Spring Security
+- Spring Data JPA
+- Hibernate
+- JWT Authentication
+- MySQL
+- Maven
 
-# 🔤 Keyword Search vs 🧠 Semantic Search
+## AI
 
-| Traditional Search      | Semantic Search                                     |
-| ----------------------- | --------------------------------------------------- |
-| Exact keyword matching  | Meaning-based matching                              |
-| Searches `"headphones"` | Can understand `"something for listening to music"` |
-| Limited context         | Understands semantic similarity                     |
-| Keyword dependent       | Vector embedding based                              |
-| Less flexible queries   | Natural-language queries                            |
+- Spring AI
+- OpenAI API
+- Embedding Models
+- Vector Search
+- Semantic Search
+
+## Frontend
+
+- React
+- Vite
+- Axios
+- CSS
+
+## DevOps
+
+- Docker
+- Docker Compose
+- Render
+- Netlify
 
 ---
 
 # 📂 Project Structure
 
-```text
+```
 src/
-└── main/
-    ├── java/
-    │   └── ...
-    │       ├── controller/
-    │       ├── service/
-    │       ├── repository/
-    │       ├── model/
-    │       └── config/
-    │
-    └── resources/
-        └── application.properties
-
-# ⚙️ Getting Started
-
-## 1. Clone the Repository
-
-```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+ ├── controller/
+ ├── service/
+ ├── repository/
+ ├── model/
+ ├── dto/
+ ├── config/
+ ├── security/
+ ├── exception/
+ └── resources/
 ```
 
+---
+
+# ⚙️ Installation
+
+## 1. Clone Repository
+
 ```bash
-cd YOUR_PROJECT_NAME
+git clone https://github.com/yourusername/ecom-ai-web.git
+
+cd ecom-ai-web
 ```
 
-## 2. Configure PostgreSQL
+---
 
-Configure the database connection in your environment/application configuration.
+## 2. Configure Database
+
+Update:
+
+```
+application.properties
+```
 
 ```properties
-spring.datasource.url=YOUR_DATABASE_URL
-spring.datasource.username=YOUR_DATABASE_USERNAME
-spring.datasource.password=YOUR_DATABASE_PASSWORD
+spring.datasource.url=
+spring.datasource.username=
+spring.datasource.password=
 ```
 
-## 3. Configure AI
+---
 
-Add the required AI API credentials through environment variables.
+## 3. Configure OpenAI
 
-```text
-AI_API_KEY=your_api_key
+```properties
+spring.ai.openai.api-key=YOUR_API_KEY
 ```
 
-> ⚠️ Never commit API keys, database passwords, or other credentials to GitHub.
+---
 
-## 4. Run the Application
+## 4. Build Project
+
+```bash
+mvn clean install
+```
+
+---
+
+## 5. Run
 
 ```bash
 mvn spring-boot:run
 ```
 
----
+Backend runs on
 
-# 🎯 Key Technical Concepts Demonstrated
-
-This project demonstrates practical implementation of:
-
-**Backend Development**
-
-* RESTful API development
-* Layered architecture
-* Spring Data JPA
-* Hibernate ORM
-* PostgreSQL integration
-
-**Artificial Intelligence**
-
-* Spring AI integration
-* LLM interaction
-* Vector embeddings
-* Semantic similarity
-* Natural-language queries
-* AI-assisted product discovery
-
-**Software Engineering**
-
-* Separation of concerns
-* API testing
-* Database persistence
-* Version control with Git
-
----
-
-# 💡 What Makes This Project Different?
-
-Instead of building only a traditional e-commerce CRUD application, this project explores how **Generative AI can improve product discovery**.
-
-```text
-Traditional E-Commerce
-        +
-     Spring AI
-        +
- Vector Embeddings
-        +
- Semantic Search
-        +
-   AI Chatbot
-        =
-AI-Powered Product Discovery 🚀
+```
+http://localhost:8080
 ```
 
-The application demonstrates how AI can be integrated into a real-world **Spring Boot backend** rather than existing as a standalone AI demo.
+---
+
+# 🐳 Docker
+
+Build
+
+```bash
+docker build -t ecom-ai .
+```
+
+Run
+
+```bash
+docker run -p 8080:8080 ecom-ai
+```
+
+Or
+
+```bash
+docker-compose up
+```
 
 ---
 
-# 🔮 Future Enhancements
+# 🔐 Authentication
 
-* 🔐 User Authentication & Authorization
-* 🛒 Shopping Cart
-* 💳 Payment Integration
-* ❤️ Wishlist
-* 🎯 Personalized Product Recommendations
-* 📊 Admin Dashboard
-* 🚚 Order Tracking
-* 💬 Persistent AI Conversation History
-* 🧠 Enhanced RAG-based Product Assistant
+Uses **JWT Authentication**.
+
+Protected APIs require:
+
+```
+Authorization: Bearer <JWT_TOKEN>
+```
+
+---
+
+# 📡 API Modules
+
+- Authentication
+- Products
+- Categories
+- Cart
+- Orders
+- Users
+- AI Chat
+- Semantic Search
+
+---
+
+# 🤖 AI Workflow
+
+```
+User Query
+      │
+      ▼
+OpenAI Embedding
+      │
+      ▼
+Vector Similarity Search
+      │
+      ▼
+Relevant Products
+      │
+      ▼
+LLM Generates Context-Aware Response
+```
+
+---
+
+# 📈 Future Enhancements
+
+- Payment Gateway Integration
+- Wishlist
+- Product Reviews
+- Email Notifications
+- Inventory Management
+- Recommendation Engine
+- Admin Analytics Dashboard
+- Multi-language Support
 
 ---
 
 # 👨‍💻 Author
 
-**Nandeshwar Reddy Challa**
+**Nandeshwar Reddy**
 
-B.Tech — Computer Science & Engineering
+Java Backend Developer
 
-**Java | Spring Boot | Spring AI | PostgreSQL | Backend Development**
+- Spring Boot
+- Spring Security
+- REST APIs
+- Spring AI
+- OpenAI
+- Semantic Search
+- MySQL
+- Docker
 
 ---
 
-<div align="center">
+# ⭐ If you like this project
 
-### ⭐ If you like this project, consider giving it a star!
+Give this repository a ⭐ on GitHub.
 
-**Built with ☕ Java • 🍃 Spring Boot • 🤖 Spring AI**
-
-</div>
+It motivates me to build more AI-powered backend applications.
